@@ -60,7 +60,7 @@ This repository showcases a complete Web3 authentication flow for Next.js applic
 ### 1. Clone the Repository
 
 ```bash
-git clone [https://github.com/your-username/web3-auth-app.git](https://github.com/elyas-hanafi/wagmi-master.git)
+git clone https://github.com/elyas-hanafi/wagmi-master.git
 ```
 
 ### 2. Install Dependencies
