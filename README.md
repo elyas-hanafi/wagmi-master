@@ -14,7 +14,6 @@ This project demonstrates how to implement **Sign-In with Ethereum (SIWE)** auth
 - [Running the Project](#running-the-project)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 
 ---
 
