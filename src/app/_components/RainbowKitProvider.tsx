@@ -1,11 +1,10 @@
 "use client";
 
 import "@rainbow-me/rainbowkit/styles.css";
-import { cookieToInitialState, State, WagmiProvider } from "wagmi";
+import { cookieToInitialState, WagmiProvider } from "wagmi";
 import {
   RainbowKitProvider as NextRainbowKitProvider,
   RainbowKitAuthenticationProvider,
-  // RainbowKitAuthenticationProvider,
 } from "@rainbow-me/rainbowkit";
 import { ReactNode } from "react";
 
@@ -13,7 +12,6 @@ import { useSession } from "next-auth/react";
 import { authenticationAdapter } from "@/utils/authenticationAdapter";
 import ReactQueryProvider from "./ReactQueryProvider";
 import { config } from "@/config";
-import { headers } from "next/headers";
 
 type RainbowKitProviderProps = {
   children: ReactNode;

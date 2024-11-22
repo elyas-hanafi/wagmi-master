@@ -1,7 +1,7 @@
 import CredentialsProvider from "next-auth/providers/credentials";
 import type { NextAuthOptions } from "next-auth";
 import { SiweMessage } from "siwe";
-import { readCookieFromStorageServerAction } from "@/app/serverActions";
+import { readCookieFromStorageServerAction } from "@/utils/action/serverActions";
 
 interface User {
   id: string;

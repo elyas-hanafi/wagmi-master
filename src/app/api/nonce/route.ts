@@ -1,8 +1,8 @@
-import { submitCookieToStorageServerAction } from "@/app/serverActions";
+import { submitCookieToStorageServerAction } from "@/utils/action/serverActions";
 import { NextResponse } from "next/server";
 import { generateNonce } from "siwe";
 
-export async function POST(req: Request, res: Request) {
+export async function POST() {
   try {
     const nonce = generateNonce();
     await submitCookieToStorageServerAction(nonce);
