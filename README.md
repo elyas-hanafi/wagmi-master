@@ -11,8 +11,6 @@ This project demonstrates how to implement **Sign-In with Ethereum (SIWE)** auth
 - [Tech Stack](#tech-stack)
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
-- [Configuration](#configuration)
-- [Project Structure](#project-structure)
 - [Running the Project](#running-the-project)
 - [Usage](#usage)
 - [Troubleshooting](#troubleshooting)
@@ -34,7 +32,6 @@ This repository showcases a complete Web3 authentication flow for Next.js applic
 - **viem**: Ensures efficient and modern blockchain interactions.
 - **Iron Session**: Manages session handling in a secure manner.
 - **NextAuth**: Handles authentication and integrates session management.
-- **API Routes**: Protects server-side resources using signed Ethereum messages.
 
 ---
 
@@ -63,8 +60,7 @@ This repository showcases a complete Web3 authentication flow for Next.js applic
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/web3-auth-app.git
-cd web3-auth-app
+git clone [https://github.com/your-username/web3-auth-app.git](https://github.com/elyas-hanafi/wagmi-master.git)
 ```
 
 ### 2. Install Dependencies
@@ -72,47 +68,6 @@ cd web3-auth-app
 ```bash
 pnpm install
 ```
-
----
-
-## Configuration
-
-### 1. Environment Variables
-
-Create a `.env.local` file in the root directory and add the following variables:
-
-```bash
-NEXT_PUBLIC_API_URL=http://localhost:3000
-SESSION_SECRET=your-session-secret-key
-NEXTAUTH_SECRET=your-nextauth-secret-key
-```
-
-- **SESSION_SECRET**: A strong secret used by Iron Session for session management.
-- **NEXTAUTH_SECRET**: A secret key used by NextAuth for encrypting session tokens.
-
-### 2. Wallet Providers and Chain Configuration
-
-You can configure the wallet providers and supported Ethereum chains in the `pages/_app.tsx` file. RainbowKit and WAGMI handle this configuration.
-
-```tsx
-import { mainnet, polygon } from 'wagmi/chains';
-```
-
----
-
-## Project Structure
-
-```
-/web3-auth-app
-├── /components            # Reusable UI components
-├── /pages
-│   ├── /api               # API routes for authentication and session management
-│   └── _app.tsx           # App entry point with WAGMI and RainbowKit setup
-├── /styles                # Global and component-specific styles
-├── /utils                 # Helper functions for SIWE message generation
-└── .env.local             # Environment variables (excluded from version control)
-```
-
 ---
 
 ## Running the Project
@@ -142,31 +97,12 @@ pnpm start
 
 1. **Connect Wallet**: On the homepage, click "Connect Wallet" to open the RainbowKit modal. Select your preferred wallet (e.g., MetaMask).
 2. **Sign Message**: Once connected, the app will prompt you to sign a cryptographic message to authenticate.
-3. **Access Protected Routes**: After signing in, you can access protected resources by using your authenticated session.
-
----
-
-## Troubleshooting
-
-### Common Issues
-
-1. **Session Not Persisting**:
-   - Ensure your `SESSION_SECRET` is set correctly and that Iron Session is configured for secure cookies in production.
-   
-2. **Signature Verification Errors**:
-   - Verify that the SIWE message and signature are being correctly generated and verified both client- and server-side.
 
 ---
 
 ## Contributing
 
 We welcome contributions! Feel free to fork the repository and submit pull requests. Make sure to follow the code style guidelines and write tests for any new features.
-
----
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ---
 
